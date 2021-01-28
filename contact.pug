@@ -1,0 +1,28 @@
+//- page-a.pug
+extends base.pug
+
+block scripts
+  script(src='/static/index.js')
+
+block style
+  style
+    include ../static/style.css
+    include ../static/contactstyle.css
+
+block content
+  div.container
+   h1 Contact Us
+   form(action="/contact",method="post",class="myForm")
+        h2 NAME: 
+        input(type="text",class="myInput",name="name",placeholder="Enter your name")
+        h2 PHONE NO.: 
+        input(type="phone",class="myInput",name="phone",placeholder="Enter your phone no.")
+        h2 EMAIL-ID: 
+        input(type="email",class="myInput",name="email",placeholder="eg:someone@gmail.com")
+        h2 ADDRESS: 
+        input(type="text",class="myInput",name="address",placeholder="Enter your address")
+        h2 DESCRIPTION: 
+        input(type="text",class="myInput",name="desc",placeholder="Write your message to us :) ")
+
+        button(class="btn")
+           | Submit

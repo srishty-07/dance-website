@@ -1,0 +1,22 @@
+//- aka layout.pug 
+//- https://pugjs.org/language/inheritance.html
+//-     //-very important point  //-dont ever create extra spaces in base.pug it will give identation error everytime and no extra line if not needed
+
+doctype html
+html
+  head
+    title yaay dance academy
+    block scripts
+    block style
+  body
+    nav#navbar
+        ul 
+          li #[a(href="/") About]
+          li #[a(href="/") Home]
+          li #[a(href="/") Services]
+          li #[a(href="/") Class Info]
+          li #[a(href="/contact") Contact Us]
+
+    block content
+    footer#footer
+        | Copyright © 2019 YaayAcademy.com | All Rights Reserved            
